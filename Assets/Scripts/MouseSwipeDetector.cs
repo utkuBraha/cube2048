@@ -51,4 +51,5 @@ namespace ChainCube.Scripts.Utils
             onSwipeEnd?.Invoke(endPosition - startPosition);
         }
     }
+    
 }
