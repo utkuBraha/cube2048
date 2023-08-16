@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ChainCube.Scripts.Utils
 {
-    public partial interface ISwipeDetector
+    public interface ISwipeDetector
     {
         event Action<Vector2> onSwipeStart;
         event Action<Vector2> onSwipe;
