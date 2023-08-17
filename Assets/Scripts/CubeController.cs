@@ -1,5 +1,5 @@
 using System.Collections;
-using ChainCube.Scripts.Utils;
+using Cube2048;
 using UnityEngine;
 using UnityEngine.Serialization;
 

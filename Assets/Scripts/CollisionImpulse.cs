@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     [RequireComponent(typeof(PointsContainer), typeof(Rigidbody), typeof(PointsContainerCollision))]
     public class CollisionImpulse : MonoBehaviour

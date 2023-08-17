@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     [RequireComponent(typeof(PointsContainerCollision), typeof (PointsContainer))]
     public class CollisionPointsContainer : MonoBehaviour

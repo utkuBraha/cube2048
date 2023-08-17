@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ChainCube.Scripts.Utils
+namespace Cube2048
 {
     public class MouseSwipeDetector : MonoBehaviour, ISwipeDetector
     {

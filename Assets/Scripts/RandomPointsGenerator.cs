@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     [RequireComponent(typeof(PointsContainer))]
     public class RandomPointsGenerator : MonoBehaviour

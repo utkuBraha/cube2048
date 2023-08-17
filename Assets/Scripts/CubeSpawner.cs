@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace ChainCube.Scripts.Utils
+namespace Cube2048
 {
     //[RequireComponent(typeof(ISwipeDetector))]
     public class CubeSpawner : MonoBehaviour

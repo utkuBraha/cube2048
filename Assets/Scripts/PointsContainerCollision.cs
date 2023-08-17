@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     public class PointsContainerCollision : MonoBehaviour
     {

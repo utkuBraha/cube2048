@@ -1,9 +1,9 @@
 using System;
-using ChainCube.Scripts.Utils;
+using Cube2048;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace ChainCube.Scripts.Handlers
+namespace Cube2048
 {
     public class ForceYMovementSwipeHandler : MonoBehaviour, IMovableObject
     {

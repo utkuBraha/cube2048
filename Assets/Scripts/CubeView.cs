@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     [RequireComponent(typeof(PointsContainer))]
     public class CubeView : MonoBehaviour

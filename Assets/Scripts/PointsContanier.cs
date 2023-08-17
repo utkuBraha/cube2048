@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace ChainCube.Scripts.Cube
+namespace Cube2048
 {
     public class PointsContainer : MonoBehaviour
     { 
