@@ -729,6 +729,18 @@ MonoBehaviour:
     material: {fileID: 2100000, guid: 674c8c512db2741688efdae3a247383f, type: 2}
   - points: 32
     material: {fileID: 2100000, guid: 6bc92fe4670b24cd0971095e7950216d, type: 2}
+  - points: 64
+    material: {fileID: 2100000, guid: c4cff8126f4ed4b13a0c38354b86a62d, type: 2}
+  - points: 128
+    material: {fileID: 2100000, guid: 50123d34457c04c3db2c9afa14e6ab0a, type: 2}
+  - points: 256
+    material: {fileID: 2100000, guid: 064c620fef3494b429c2b6e252c7aee9, type: 2}
+  - points: 512
+    material: {fileID: 2100000, guid: 6300af685a2ab41449ebcda55f0023df, type: 2}
+  - points: 1024
+    material: {fileID: 2100000, guid: 6e77dfe32ca0d4fa99fa050b38fffa25, type: 2}
+  - points: 2048
+    material: {fileID: 2100000, guid: 645d366d74b8e4f3682b52fbdc51782d, type: 2}
 --- !u!114 &5936410350368722698
 MonoBehaviour:
   m_ObjectHideFlags: 0

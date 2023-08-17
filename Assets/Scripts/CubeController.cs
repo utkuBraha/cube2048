@@ -1,7 +1,5 @@
-using System.Collections;
 using Cube2048;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CubeController : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public class CubeController : MonoBehaviour
         {
             if (cube == value)
                 return;
-
             cube = value;
             Inject();
         }

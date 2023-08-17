@@ -21,19 +21,15 @@ namespace Cube2048
         {
             if (col.points == pointsContainer.points)
                 rb.AddForce(Vector3.up * 10, ForceMode.Impulse);
-            
         }
-
         private void Subscribe()
         {
             detector.onCollisionStart += OnCollisionStart;
         }
-
         private void Unsubscribe()
         {
             detector.onCollisionStart -= OnCollisionStart;
         }
-
         private void OnDestroy()
         {
             Unsubscribe();

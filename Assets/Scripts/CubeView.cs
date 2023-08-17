@@ -19,7 +19,6 @@ namespace Cube2048
             SetPoints(_container.points);
             Subscribe();
         }
-        
         private void SetPoints(long points)
         {
             foreach (var text in _texts)
@@ -33,25 +32,20 @@ namespace Cube2048
                     _renderer.material = settings.material;
             }
         }
-
         private void Subscribe()
         {
             _container.onPointsChanged += SetPoints;
         }
-        
         private void Unsubscribe()
         {
             _container.onPointsChanged -= SetPoints;
         }
-
         private void OnDestroy()
         {
             Unsubscribe();
         }
     }
-
-    [System.Serializable]
-    public class MaterialSettings
+    [System.Serializable] public class MaterialSettings
     {
         public long points;
         public Material material;

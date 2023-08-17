@@ -22,17 +22,14 @@ namespace Cube2048
                 Destroy(col.gameObject);
             }
         }
-
         private void Subscribe()
         {
             detector.onCollisionContinue += OnPointsContainerCollision;
         }
-        
         private void Unsubscribe()
         {
             detector.onCollisionContinue -= OnPointsContainerCollision;
         }
-
         private void OnDestroy()
         {
             Unsubscribe();

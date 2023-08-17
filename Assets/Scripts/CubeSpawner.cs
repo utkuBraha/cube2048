@@ -1,23 +1,21 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Cube2048
 {
-    //[RequireComponent(typeof(ISwipeDetector))]
     public class CubeSpawner : MonoBehaviour
     {
         [SerializeField] private float spawnDelay = 0.3f;
         [SerializeField] private GameObject cubePrefab;
         [SerializeField] private GameObject swipeDetectorObject;
-        private global::CubeController[] cubeDependencies;
+        private CubeController[] cubeDependencies;
         private ISwipeDetector swipeDetector;
         private Coroutine spawnRoute;
         
         private void Start()
         {
             swipeDetector = swipeDetectorObject.GetComponent<ISwipeDetector>();
-            cubeDependencies = FindObjectsOfType<global::CubeController>();
+            cubeDependencies = FindObjectsOfType<CubeController>();
             Subscribe();
         }
         private void Subscribe()

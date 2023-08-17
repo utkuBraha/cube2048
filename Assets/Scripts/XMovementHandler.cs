@@ -1,7 +1,5 @@
 using System;
-using Cube2048;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Cube2048
 {
