@@ -13,7 +13,7 @@ namespace Cube2048
         private float normalizedCoefficient = 1.0f;
         private GameObject movableObject;
         private ISwipeDetector swipeDetector;
-        
+
         public void Inject(GameObject dependency)
         {
             movableObject = dependency;
@@ -64,5 +64,6 @@ namespace Cube2048
             swipeDetector.onSwipe -= OnSwipe;
         }
     }
-    public interface IMovableObject : IDependency<GameObject> { }
+    public interface IMovableObject : CubeController.IDependency<GameObject> { }
+    
 }

@@ -51,5 +51,9 @@ namespace Cube2048
             onSwipeEnd?.Invoke(endPosition - startPosition);
         }
     }
-    
+    public interface ISwipeDetector
+    {
+        event Action<Vector2> onSwipe;
+        event Action<Vector2> onSwipeEnd;
+    }
 }

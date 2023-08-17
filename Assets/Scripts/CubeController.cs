@@ -30,4 +30,8 @@ public class CubeController : MonoBehaviour
             dependency.Inject(Cube);
         }
     }
+    public interface IDependency<T> where T : class
+    {
+        void Inject(T dependency);
+    }
 }
