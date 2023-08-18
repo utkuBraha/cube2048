@@ -13,7 +13,7 @@ namespace Cube2048
         private float normalizedCoefficient = 1.0f;
         private GameObject move;
         private ISwipeDetector swipeDetector;
-        private float maxSwipeSpeed = 8.0f;
+        [SerializeField]private float maxSwipeSpeed = 10.0f;
 
 
         public void Inject(GameObject dependency)
@@ -64,6 +64,4 @@ namespace Cube2048
             swipeDetector.onSwipe -= OnSwipe;
         }
     }
-    public interface IMovableObject : CubeController.IDependency<GameObject> { }
-    
 }
