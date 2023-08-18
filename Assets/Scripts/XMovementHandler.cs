@@ -11,12 +11,14 @@ namespace Cube2048
         private Transform rightBorder;
         [SerializeField, Range (0.5f, 1.5f)]
         private float normalizedCoefficient = 1.0f;
-        private GameObject movableObject;
+        private GameObject move;
         private ISwipeDetector swipeDetector;
+        private float maxSwipeSpeed = 8.0f;
+
 
         public void Inject(GameObject dependency)
         {
-            movableObject = dependency;
+            move = dependency;
         }
         private void Start()
         {
@@ -32,26 +34,24 @@ namespace Cube2048
         }
         private void OnSwipe(Vector2 delta)
         {
-            if (movableObject == null)
+            if (move == null)
             {
                 return;
             }
-            if (Mathf.Abs(delta.x - Mathf.Epsilon) <= 0)
+            if (Mathf.Approximately(delta.x, 0))
+            {
                 return;
+            }
             var borderDistance = Mathf.Abs(rightBorder.position.x - leftBorder.position.x);
             var offset = borderDistance * normalizedCoefficient * delta.x / Screen.width;
-            var currentPos = movableObject.transform.position;
-            
-            movableObject.transform.position = new Vector3(currentPos.x + offset, currentPos.y, currentPos.z);
-            
-            if (movableObject.transform.position.x > rightBorder.position.x)
-                movableObject.transform.position = rightBorder.transform.position;
-            else if (movableObject.transform.position.x < leftBorder.position.x)
-                movableObject.transform.position = leftBorder.transform.position;
+            var currentPos = move.transform.position;
+            offset = Mathf.Clamp(offset, -maxSwipeSpeed * Time.deltaTime, maxSwipeSpeed * Time.deltaTime);
+            var newPositionX = Mathf.Clamp(currentPos.x + offset, leftBorder.position.x, rightBorder.position.x);
+            move.transform.position = new Vector3(newPositionX, currentPos.y, currentPos.z);
         }
         private void OnSwipeEnd(Vector2 delta)
         {
-            movableObject = null;
+            move = null;
         }
         private void OnDestroy()
         {
