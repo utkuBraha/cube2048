@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Cube2048
@@ -28,7 +29,18 @@ namespace Cube2048
             if (moveRb == null)
                 return;
             moveRb.AddForce(moveRb.transform.forward * force, ForceMode.Impulse);
+            StartCoroutine(ChangeCubeTagAndCheck(moveRb.gameObject));
             moveRb = null;
+           
+        }
+        private IEnumerator ChangeCubeTagAndCheck(GameObject go)
+        {
+            yield return new WaitForSeconds(1.0f);
+        
+            if (go == null) yield break;
+            go.tag = "ChangedCube";
+            Debug.Log("Cube tag changed");
+        
         }
         private void OnDestroy()
         {

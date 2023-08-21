@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Cube2048
 {
+    
     [RequireComponent(typeof(PointsContainer))]
     public class RandomPointsGenerator : MonoBehaviour
     {
@@ -22,5 +23,7 @@ namespace Cube2048
             minDegree = defaultMinDegree;
             maxDegree = defaultMaxDegree;
         }
+        
     }
-}
+    }
+
